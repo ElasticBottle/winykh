@@ -43,8 +43,9 @@ theme = "codex"
 [markup]
   [markup.highlight]
     codeFences = false
-    PygmentsCodeFences = true
-    PygmentsStyle = "monokai"
+    # style = "monokai"
+    # lineNoStart = 1
+    # lineNos = true
 
     
   # Set to false to disallow raw HTML in markdown files
