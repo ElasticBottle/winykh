@@ -1,5 +1,5 @@
 # Override these settings with your own
-baseURL = "https://example.org/"
+baseURL = "https://winykh.netlify.app/"
 languageCode = "en-us"
 copyright = "© {year}"
 
