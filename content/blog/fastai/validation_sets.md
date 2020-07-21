@@ -1,11 +1,11 @@
 ---
-title: "Validation_sets"
+title: "Validation Sets"
 date: 2020-07-10T14:30:26+08:00
-slug: ""
-description: ""
-keywords: []
+slug: "validation-set"
+description: "Difference between training, validation, and test set in machine learning"
+keywords: [AI", "Artificial Intelligence", "Machine Learning", "ML","validation set", "validation sets", "test sets"]
 draft: false
-tags: []
+tags: ["FastAI", "AI"]
 math: false
 toc: false
 ---
