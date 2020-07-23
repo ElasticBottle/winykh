@@ -12,13 +12,39 @@ toc: false
 
 ## Neural Networks
 
+A neural network is nothing more than a combination of weights (sometimes called parameters) and activations.
+
+### Parameters
+
+These are the weights associated with each layer. They are also the ones that get updated.
+
+### Activations
+
+These are the non-linearity that is present within the neural network. Non-linearity is important because it allows us to approximate infinitely complex functions by layering these non-linearity.
+
+There are many types of activation. Here are some common ones:
+
+- Sigmoid
+  - Squishes an input between the range of $]0, 1[$
+  - Also known as the logistic function, $f(x) = \frac{1}{1 + e^{-x}}$
+  - Often applied in the last layer of a binary classification network.
+  - Experience a vanishing gradient as score is very positive or negative.
+- Softmax
+  - Applies to a layer of outputs and squishes such that the $\sum_{output} = 1$
+  - $f(x) = \frac{e^{x}}{\sum_{i = 1}^{C}e^{x_i}}$
+  - Often applied in the last layer of the a multi-class classification neural network.
+- ReLu (Rectified Linear Unit)
+  - Is often used in place of the sigmoid these days to fix vanishing gradient problem
+  - $ReLu(x) = \max(x, 0)$
+  - Has other variants where the gradient for $x \lt 0$ is non zero. Otherwise known as *Leaky ReLu*
+
 ## Convolution Neural networks
 
 A Convolution refers to the processing of an input with a kernel.
 
 The kernel acts as a sliding window, performing element wise multiplication with each element before summing everything up to obtain a single value in our output.
 
-![Image of kernel multiplication with input image](/static/images/fastai/cnn.png "Image of kernel multiplication with input image")
+![Image of kernel multiplication with input image](/images/fastai/cnn.png "Image of kernel multiplication with input image")
 
 Instead of sliding window, convolution can also be done by expanding the kernel as a circulant matrix and performing matrix multiplication with the input.
 
@@ -190,3 +216,45 @@ Have the update be based on current gradient and previous gradient.
 ### Adam
 
 ## Evaluating performance - Loss functions
+
+
+### Classification - Cross Entropy Loss
+
+Before we dive into the loss function for evaluating image classification problem, we need to evaluate the type of image classification.
+
+In particular, we have:
+
+- Multi-class classification
+  - Each image belong to 1 of $C$ classes.
+  - Number of output correspond to $C$ and the max score of the outputs is taken as the class for that image.
+- Multi-label classification
+  - Each image belong to some number of $C$ classes.
+  - Number of output correspond to $C$.
+  - Each output attempts a binary task of deciding if that image belongs to that label or not. An image is said to be in that class if it passes some threshold for that class.
+
+Cross Entropy is then defined as:
+
+$$Loss(x) = - \sum_{i = 0}^{n}t_i\log(s_i) \text{ , where }\\
+n\text{ is the number of classes, }\\
+t\text{ is the ground truth}\\
+s \text{ is the score for that class}$$
+
+Variants of cross entropy loss are then used for the two different kind of classification problem.
+
+#### Categorical Cross Entropy Loss
+
+This variant of Cross Entropy Loss is used for Multi-class classification.
+
+$s$ is a $Softmax(x)$ activation function.
+
+$t_i$ is the One-hot encoded matrix for ground truth of the image class.
+
+Resulting equation is:
+
+$$Loss(x) = - \log(\frac{e^{s_{pred}}}{\sum_{i = 0}^{n} e^{s_I}}), s = neuralNetwork(x)$$
+
+$$\nabla_{s_{pred}}Loss(x) = \underbrace{\frac{e^{s_{pred}}}{\sum_{i = 0}^{n} e^{s_I}}}_{softmax} - 1$$
+
+#### Binary Entropy Loss
+
+#### Focal Loss
