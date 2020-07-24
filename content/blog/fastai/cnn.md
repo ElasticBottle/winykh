@@ -243,7 +243,7 @@ Variants of cross entropy loss are then used for the two different kind of class
 
 #### Categorical Cross Entropy Loss
 
-This variant of Cross Entropy Loss is used for Multi-class classification.
+This variant of Cross Entropy Loss is often used for Multi-class classification. It is also sometimes called the softmax loss.
 
 $s$ is a $Softmax(x)$ activation function.
 
@@ -253,8 +253,32 @@ Resulting equation is:
 
 $$Loss(x) = - \log(\frac{e^{s_{pred}}}{\sum_{i = 0}^{n} e^{s_I}}), s = neuralNetwork(x)$$
 
-$$\nabla_{s_{pred}}Loss(x) = \underbrace{\frac{e^{s_{pred}}}{\sum_{i = 0}^{n} e^{s_I}}}_{softmax} - 1$$
+$$\nabla_{s_{pred}}Loss(x) = \underbrace{\frac{e^{s_{pred}}}{\sum_{i = 0}^{n} e^{s_i}}}_{softmax} - 1$$
 
-#### Binary Entropy Loss
+$$\nabla_{s_{other}} Loss(x) = \frac{e^{s_{other}}}{\sum_{i = 0}^{n}e^{s_i}}$$
+
+Cross Entropy can also be extended to multi-label classification.
+
+Although not originally intended for it, it has been shown by [this paper](https://research.fb.com/publications/exploring-the-limits-of-weakly-supervised-pretraining/) that it works better than the normally used binary cross entropy loss.
+
+The modified categorical cross entropy loss is simply the log sum of the predicted class divided by the number of classes $M$ predicted.
+
+$$ Loss(x) = \frac{1}{M}\sum_{p}^{M}-\log{\frac{e^{s_p}}{\sum_{i = 0}^{n}e^{s_i}}}$$
+$$\nabla_{s_{other}} Loss(x) = \frac{e^{s_{other}}}{\sum_{i = 0}^{n}e^{s_i}}$$
+$$\nabla_{s_{p^i}} Loss(x) = \frac{1}{M}\left(\frac{e^{s_{p^i}}}{\sum_{i = 0}^{n}e^{s_i}} - 1 + (M - 1)\frac{e^{s_{p^i}}}{\sum_{i = 0}^{n}e^{s_i}}\right)$$
+
+Where $s_{p^i}$ is the score of any positive class.
+
+#### Binary Cross Entropy Loss
+
+Binary Cross Entropy loss is also sometimes called the sigmoid cross entropy loss.
+
+Due to the use of sigmoid as an activation function instead of softmax, it is often used for multi-label classification.
+
+Why?
+
+Because the insight of an input belonging to a certain class does not affect the chance of the input belonging to another class.
+
+The way this is done is by having binary Cross entropy loss set-up a $C = 2$ classification problem for each class, $c$, in $C$.
 
 #### Focal Loss
