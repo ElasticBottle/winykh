@@ -217,7 +217,6 @@ Have the update be based on current gradient and previous gradient.
 
 ## Evaluating performance - Loss functions
 
-
 ### Classification - Cross Entropy Loss
 
 Before we dive into the loss function for evaluating image classification problem, we need to evaluate the type of image classification.
@@ -237,7 +236,7 @@ Cross Entropy is then defined as:
 $$Loss(x) = - \sum_{i = 0}^{n}t_i\log(s_i) \text{ , where }\\
 n\text{ is the number of classes, }\\
 t\text{ is the ground truth}\\
-s \text{ is the score for that class}$$
+s \text{ is the score for that class, derived from }x$$
 
 Variants of cross entropy loss are then used for the two different kind of classification problem.
 
@@ -281,4 +280,22 @@ Because the insight of an input belonging to a certain class does not affect the
 
 The way this is done is by having binary Cross entropy loss set-up a $C = 2$ classification problem for each class, $c$, in $C$.
 
+$$\begin{aligned}Loss(x) &= - \sum_{i = 0}^{1} t_i\log{\sigma(s_i)} \\ &= - [t_0\log{\sigma(s_0)} + (1 - t_0)\log{\sigma(1 - s_0)}\end{aligned}$$
+
+where $\sigma$ is the sigmoid function.
+
+$$\nabla_{s_i} Loss(x) = t_0(\sigma(s_i) + 1) + (1 - t_0)(\sigma(s_i)$$
+
 #### Focal Loss
+
+Focal Loss uses sigmoid activation and is a variant of Binary Cross Entropy Loss.
+
+Focal Loss supposedly reduces the problem of class imbalance by making the loss implicitly focus in those problematic classes.
+
+$$\begin{aligned}Loss(x) &= -\sum_{i = 0}^{1}(1 - \sigma(s_i))^{\gamma} t_i\log{\sigma(s_i)} \\ &= -[t_0(1 - \sigma(s_i))^{\gamma}\log{\sigma(s_i)} + (1 - t_0)(1 - \sigma(1 - s_0))^{\gamma}\log{\sigma(1 - s_0)}\end{aligned}$$
+
+The equation above reduces to Binary Cross Entropy when $\gamma = 0$.
+
+$$\nabla_{s_0} Loss(x) = (1 - \sigma(s_i))^{\gamma}(-\gamma \sigma(s_i) \log{\sigma(s_i)} + \sigma(x) - 1)$$
+
+To get the differential with respect to $s_1$, simply replace $s_0$ with $1-s_0$
