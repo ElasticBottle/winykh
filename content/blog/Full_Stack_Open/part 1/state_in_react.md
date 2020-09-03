@@ -5,7 +5,7 @@ slug: "debug-react"
 description: "An introduction to managing states in react"
 keywords: ["Web Forms", "forms", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: true
 ---

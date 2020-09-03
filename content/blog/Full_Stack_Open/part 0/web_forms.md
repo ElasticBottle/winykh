@@ -5,7 +5,7 @@ slug: "intro-web-forms"
 description: "A short introduction to web forms"
 keywords: ["Web Forms", "forms", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: false
 ---

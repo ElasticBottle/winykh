@@ -5,7 +5,7 @@ slug: "intro-js"
 description: "the language of the web, now introduced"
 keywords: ["Js", "JavaScript", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: true
 ---

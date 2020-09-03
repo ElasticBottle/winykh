@@ -5,7 +5,7 @@ slug: "intro-web-apps"
 description: "A short introduction to Web Apps"
 keywords: ["Web Application", "Web App", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: false
 ---

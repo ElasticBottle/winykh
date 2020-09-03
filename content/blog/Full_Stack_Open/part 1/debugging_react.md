@@ -5,7 +5,7 @@ slug: "debug-react"
 description: "developer console is your friend"
 keywords: ["debugging react apps", "react troubleshooting", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: false
 ---

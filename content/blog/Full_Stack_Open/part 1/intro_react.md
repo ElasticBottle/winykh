@@ -5,7 +5,7 @@ slug: "intro-react"
 description: "An Introduction to React"
 keywords: ["React", "forms", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: true
 ---

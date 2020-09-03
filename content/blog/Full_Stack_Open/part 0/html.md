@@ -1,11 +1,11 @@
 ---
 title: "Introduction to HTML"
-date: 2020-08-8T11:22:39+08:00
+date: 2020-08-08T11:22:39+08:00
 slug: "intro-html"
 description: "A short introduction to HTML"
 keywords: ["Hypertext markup language", "HTML", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: false
 ---

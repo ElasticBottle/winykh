@@ -5,7 +5,7 @@ slug: "intro-css"
 description: "A short introduction to css"
 keywords: ["Cascading Style Sheets", "CSS", "Web", "Web-dev"]
 draft: false
-tags: ["Full Stack Open", "Web"]
+tags: ["Full_Stack_Open", "Web"]
 math: false
 toc: false
 ---
