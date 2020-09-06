@@ -13,7 +13,7 @@ theme = "codex"
 # disqusShortname = ""
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
-# googleAnalytics = "" 
+googleAnalytics = "UA-158898699-1" 
 
 # Optional params
 [params]
@@ -42,10 +42,8 @@ theme = "codex"
 # vendor script in layouts/blog/single.html.
 [markup]
 
-    # style = "monokai"
-    # lineNoStart = 1
-    # lineNos = true
-
+  [markup.highlight]
+    codeFences = false
     
   # Set to false to disallow raw HTML in markdown files
   [markup.goldmark.renderer]
