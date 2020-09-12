@@ -1,7 +1,7 @@
 ---
 title: "States in React"
 date: 2020-08-19T11:22:39+08:00
-slug: "debug-react"
+slug: "states-in-react"
 description: "An introduction to managing states in react"
 keywords: ["Web Forms", "forms", "Web", "Web-dev"]
 draft: false
