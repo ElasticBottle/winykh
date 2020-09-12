@@ -45,6 +45,8 @@ Feel free to check out [this video](https://www.youtube.com/watch?v=sjyJBL5fkp8&
 - null
 - undefined
 
+Most variable are truthy in js, like python. As long as it's not `0`, `null`, and empty `object` // `string`, or `undefined`, or something that indicated nothingness.
+
 ### Numbers
 
 Just thought it would be an interesting fact, there's no such thing as an integer in JavaScript (except [BigInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)).
@@ -70,6 +72,16 @@ More on that topic [here](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 ```js
 const array = []
 ```
+
+### Looping through Arrays
+
+JavaScript supports different kinds of loops:
+
+- `for (i = 0; i < 5; i++)` - Loops through 5 times
+- `for (x in person)` - loops through the properties of an object
+- `for (x of cars)` - loops through the values of an iterable object
+- `while (i < 10)` - loops until the specified condition is false
+- `do {} while (condition);` - same as while except guaranteed to run at least once
 
 ### Concat
 
