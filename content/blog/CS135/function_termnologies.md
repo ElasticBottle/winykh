@@ -25,14 +25,14 @@ Functional based on computation of new values instead of changing old ones. It i
 A function is really three parts:
 
 * Name (e.g. $g$)
-* Parameters(e.g. $$ ,$y$)
+* Parameters(e.g. $x$ ,$y$)
 * An algebraic expression using the parameters. (e.g. $x + y$)
 
 When applying functions, **arguments** are taken in as **parameters**.
 
 The function is then evaluated to yield values.
 
-$$\begin{aligned}g(x) &= 2(x) \\g(4) &= 2(4) \\&= 8 \end{aligned}$$
+$$\begin{aligned}g(x) &= 2(x) \\ g(4) &= 2(4) \\&= 8 \end{aligned}$$
 
 As functions get more complicated, there becomes multiple ways of evaluating the function. That is where the canonical forms comes into play.
 
@@ -45,7 +45,7 @@ There are two rules:
 * Functions are only applied to values (i.e. only apply a function when its parameters // arguments are values)
 * If there are multiple substitution, then the left most expression is substituted first.
 
-Going of the first rule, it can also be seen that the basic operators: $+, - \times, \div, \%$ can be seen as functions.
+Going of the first rule, it can also be seen that the basic operators: $+, -, \times, \div, \%$ can be seen as functions.
 
 ### Harmonizing the parenthesis
 

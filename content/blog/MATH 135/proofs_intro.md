@@ -108,7 +108,7 @@ $$\forall x \in X, \exist y \in Y, x > y \not\equiv \exist x \in X, \forall y \i
 
 The open statement $x > y$ can also be replaced with $Q(x, y)$ to mean an open set whose truth value can be determine for $x$ and $y$, chosen from the domain $X$, and $Y$ respectively
 
-### More than 2 quantifiers.
+### More than 2 quantifiers
 
 Consider:
 
@@ -124,11 +124,11 @@ Such a scenario is especially common in deriving limits for calculus.
 
 #### Limits in calculus
 
-The limit, $L$, in calculus is defined such that as $x$ approaches $a\in \real$, $f(x)$ tends towards $L$.
+The limit, $L$, in calculus is defined such that as $x$ approaches $a\in \mathbb{R}$, $f(x)$ tends towards $L$.
 
 More formally, for any positive tolerance, $\epsilon$, from $L$, there exist a $\delta \gt 0$, such that if $|x - a|\lt \delta$ is true, then $|f(x) - L| \lt \epsilon$.
 
-Even more formally, $\forall \epsilon \in \real, \exist \delta \in \real, \forall x \in \real, if |x - a|\lt \delta, then |f(x) -L| < \epsilon$
+Even more formally, $\forall \epsilon \in \mathbb{R}, \exist \delta \in \mathbb{R}, \forall x \in \mathbb{R}, if |x - a|\lt \delta, then |f(x) -L| < \epsilon$
 
 ## Negating Multiple Quantifiers
 
