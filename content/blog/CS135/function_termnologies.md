@@ -16,7 +16,7 @@ Functional based on computation of new values instead of changing old ones. It i
 
 ## Some Terminologies
 
-* Value: Numbers and mathematical objects
+* Value: an instance of a type of data
 * Expressions: Combination of values with functions.
 * Functions: Generalized similar expressions.
 

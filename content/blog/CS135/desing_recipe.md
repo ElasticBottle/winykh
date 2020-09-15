@@ -111,10 +111,24 @@ assert sum_all(-1, 1) == 0
 
 A small note, answers to test should be calculated independently. You should not be using your program to derive the answer.
 
+### Types of testing: Open Box
+
+Open box testing refers to test written when the implementation detail of the program is known.
+
+### Types of testing: Close Box
+
+Close box testing refers to writing test where the implementation details of the program is not known.
+
+Both are important when writing tests.
+
 ## Examples Versus Tests
 
 Both show what is expected given a certain input
 
-Examples, however, focuses more on how the function is mean to be used. Does not actually take into account how the function was implemented.
+Examples, however, focuses more on how the function is mean to be used. Does not actually take into account how the function was implemented. (Tends to be close box)
+Normally, we have one example per possible scenario of the function.
 
-Test, on the other hand, focus more the edge-cases and takes into account how the function was implemented to account for what can go wrong
+* 2 examples for predicates
+* 1 example if the function returns a simple value like int
+
+Test, on the other hand, focus more the edge-cases and takes into account how the function was implemented to account for what can go wrong. (Tends to be open box)
