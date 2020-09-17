@@ -25,7 +25,7 @@ Sets can contain any type of object.
 
 ### Some examples of sets
 
-$$\begin{aligned} \real &\text{: real numbers}\\ \natnums &\text{: Natural Numbers, whole numbers from }0 \\ \mathbb{Z} &\text{: Integers}\\ \mathbb{Q} &\text{: Rational Numbers}\end{aligned}$$
+$$\begin{aligned} \mathbb{R} &\text{: real numbers} \\ \natnums &\text{: Natural Numbers, whole numbers from }0 \\ \mathbb{Z} &\text{: Integers} \\ \mathbb{Q} &\text{: Rational Numbers}\end{aligned}$$
 
 We use capital letter sot represent a set, $S$, and small letters to represent elements of a set, $s$.
 
@@ -37,7 +37,7 @@ A statement is a sentence that has a definite state of being **either true or fa
 
 ### Examples of Statements
 
-$$\begin{aligned}2 + 3 &= 5 \text{ False}\\ \pi + 2 &\leq 5 \text{ True}\end{aligned}$$
+$$\begin{aligned}2 + 3 &= 5 \text{ False} \\ \pi + 2 &\leq 5 \text{ True}\end{aligned}$$
 
 We can negate statements, $\neg{A}$.
 
