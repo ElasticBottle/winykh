@@ -5,7 +5,7 @@ slug: "data-types"
 description: "Different types of data introduced"
 keywords: ["CS135", "Waterloo", "data types", "DrRacket"]
 draft: false
-tags: ["CS135","DrRacket", "Waterloo"]
+tags: ["CS135", "DrRacket", "Waterloo"]
 math: true
 toc: true
 ---
@@ -62,7 +62,7 @@ This is done by stacking predicates one after another.
 
 In DrRackets, `cond` is used and at least one conditions **must** evaluate to `true`. (you can just at an `else` for safety measure.)
 
-``` racket
+```racket
 (define (foo x)
   (cond [(even? x) 0]
         [(= x 2) 2]
