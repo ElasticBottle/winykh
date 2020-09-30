@@ -1,19 +1,14 @@
 ---
 title: "Introduction to statements and sets"
 date: 2020-09-11T21:19:19+08:00
-slug: "intro-proofs"
+slug: "statements-and-sets"
 description: "A short introduction on how to make a true statement"
-keywords: ["MATH135", "Waterloo", "Proofs"]
+keywords: ["MATH135", "Waterloo", "Proofs", "statements", "sets"]
 draft: false
 tags: ["MATH135", "Waterloo"]
 math: true
 toc: true
 ---
-
-- Direct proof
-- proof by contrapositive
-- proof by contradiction
-- proof by induction
 
 ## Set
 
@@ -72,7 +67,7 @@ Existential Quantified statements:
 $$\exist x \in S, P(x)$$
 In English: There exist at least one value of $x$ in $S$ such that $P(x)$ is true.
 
-## Negating Statements  
+## Negating Statements
 
 | Quantified Statement   | True                                          | False                                           |
 | ---------------------- | --------------------------------------------- | ----------------------------------------------- |
