@@ -24,6 +24,14 @@ A (listof X) is one of:
 
 Notice the use of `(listof X)` in defining the data definition.
 
+Other types of data definition can include numbers:
+
+```racket
+;; A Nat is one of:
+;; * 0
+;; * (add1 Nat)
+```
+
 ## Templates
 
 A template is a general framework that we develop in order to deal with certain kinds of data definitions.
@@ -48,6 +56,22 @@ We use `...` to represent parts of the template that are to be filled in by the 
 ;; Tests
 ```
 
+Natural Number template
+
+```racket
+;; (nat-template n): PURPOSE
+;; Examples:
+(check-expect (nat-template 0) ANSWER)
+(check-expect (nat-template 1) ANSWER)
+
+;; nat-template: Num -> Any
+(define (nat-template n)
+  (cond
+    [(zero? n) ...]
+    [else (... n ...
+          ... (nat-template (sub1 n)) ...)])) ; Notice how we did sub1 instead of add1
+```
+
 The key to breaking down the complex case is to think how you will solve the case just one size bigger.
 
 Another thing to note is to consider how to process each case. For example, `empty` cannot be processed further and hence we left `...` in `(empty? lox) ...`. On the other hand, we could process the first element of the non-empty list to combine it with the rest of the list. Hence, we see `(... (first lox) (listof-X-template (rest lox)))`.
@@ -61,7 +85,7 @@ In particular, the template and data definition are part of a group of recursion
 A function is considered to employ simple recursion if the arguments in the recursive function call satisfy either of the criterion:
 
 1. The arguments are unchanged.
-2. The arguments are one step closer to the base case.
+2. The arguments are one step closer to the base case. (Hence `sub1` for `nat-template`)
 
 Sometimes, in order to best utilize recursive functions, we need data in form that is not convenient for the user to provide.
 
